@@ -638,31 +638,38 @@ function equalize(array) {
 }
 /*------------------------------------------------------*/
 function numberJoy(n) {
-  let b  = n.toString().split('').reduce((a,b)=>+a + +b)
-  return  b * b.toString().split('').reverse().join('') == n  
+  let b = n
+    .toString()
+    .split("")
+    .reduce((a, b) => +a + +b);
+  return b * b.toString().split("").reverse().join("") == n;
 }
 /*------------------------------------------------------*/
 function spacify(str) {
-  return str.split('').join(' ')
+  return str.split("").join(" ");
 }
 /*------------------------------------------------------*/
-function getNewNotes(salary,bills){
-  return (salary - bills?.reduce((a,b)=>a+b,0)) > 0 
-    ? Math.floor((salary - bills.reduce((a,b) => a+b,0)) / 5) 
-    : 0
+function getNewNotes(salary, bills) {
+  return salary - bills?.reduce((a, b) => a + b, 0) > 0
+    ? Math.floor((salary - bills.reduce((a, b) => a + b, 0)) / 5)
+    : 0;
 }
 /*------------------------------------------------------*/
 function tea42(input) {
-return input.toString().replace(/2/gi,'t')
-};
+  return input.toString().replace(/2/gi, "t");
+}
 /*------------------------------------------------------*/
 function partlist(arr) {
-  let b = []
-  for(let i = 0; i <arr.length-1; i++) 
-  b.push([arr.slice(0,i+1).join(' '),arr.slice(i+1).join(' ')])
-  return b
+  let b = [];
+  for (let i = 0; i < arr.length - 1; i++)
+    b.push([arr.slice(0, i + 1).join(" "), arr.slice(i + 1).join(" ")]);
+  return b;
 }
 /*------------------------------------------------------*/
 function isLeapYear(duration, year) {
-  return duration * year % 1 === 0
+  return (duration * year) % 1 === 0;
+}
+/*------------------------------------------------------*/
+function isFlush(cards) {
+return cards.map(e=>e[e.length-1]).every((e,_,a)=>e==a[0])
 }
