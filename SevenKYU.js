@@ -15,3 +15,10 @@ function collatz(n) {
        }
      return arr.length + 1;
    }
+
+/* ------------------------------------------------------- */
+function inAscOrder(arr) {
+return arr.toString() === arr.sort((a, b) => a - b).toString();
+}
+
+/* ------------------------------------------------------- */
