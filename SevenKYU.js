@@ -22,3 +22,8 @@ return arr.toString() === arr.sort((a, b) => a - b).toString();
 }
 
 /* ------------------------------------------------------- */
+
+function isIsogram(str){  
+  let uniq = [...new Set(str.toLowerCase())]
+  return str.length===uniq.length;
+  }
