@@ -27,3 +27,9 @@ function isIsogram(str){
   let uniq = [...new Set(str.toLowerCase())]
   return str.length===uniq.length;
   }
+/* ------------------------------------------------------- */
+
+  function findUniq(arr) {
+    const dupl = (arr.filter((e)=>(e!==arr[0])))
+    return dupl.length==1?+dupl.join(''):arr[0]
+    }
