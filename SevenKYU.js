@@ -33,3 +33,9 @@ function isIsogram(str){
     const dupl = (arr.filter((e)=>(e!==arr[0])))
     return dupl.length==1?+dupl.join(''):arr[0]
     }
+/* ------------------------------------------------------- */
+
+function findShort(s){
+return s.split(" ").map(e => e.length).sort((a,b)=> a-b).shift();
+
+}
