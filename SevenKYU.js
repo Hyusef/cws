@@ -37,5 +37,8 @@ function isIsogram(str){
 
 function findShort(s){
 return s.split(" ").map(e => e.length).sort((a,b)=> a-b).shift();
-
 }
+
+/* ------------------------------------------------------- */
+
+const last = xs =>  xs.length ? xs.pop() : null;
