@@ -42,3 +42,10 @@ return s.split(" ").map(e => e.length).sort((a,b)=> a-b).shift();
 /* ------------------------------------------------------- */
 
 const last = xs =>  xs.length ? xs.pop() : null;
+
+/* ------------------------------------------------------- */
+
+
+function maskify(cc){
+  return cc.substr(0, cc.length-4).replace(/\w/g,'#') + cc.slice(-4);
+}
