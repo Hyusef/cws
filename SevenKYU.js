@@ -50,7 +50,7 @@ function maskify(cc){
   return cc.substr(0, cc.length-4).replace(/\w/g,'#') + cc.slice(-4);
 }
 
-/* ------------------------------------------------------- */
+/* ------------------------------------------------------ */
 Array.prototype.remove_ = function(integer_list, values_list){
   return integer_list.filter(e=>!values_list.includes(e))
 }
