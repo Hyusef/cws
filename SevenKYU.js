@@ -54,4 +54,11 @@ function maskify(cc){
 Array.prototype.remove_ = function(integer_list, values_list){
   return integer_list.filter(e=>!values_list.includes(e))
 }
-
+/* ------------------------------------------------------ */
+function longest(s1, s2) {
+  return Array
+    .from(new Set((s1 + s2)
+    .split('')))
+    .sort()
+    .join('')
+}
