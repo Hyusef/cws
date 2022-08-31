@@ -62,3 +62,7 @@ function longest(s1, s2) {
     .sort()
     .join('')
 }
+/* ------------------------------------------------------ */
+function min(arr, toReturn) {
+  return toReturn ==='index'? arr.indexOf(Math.min(...arr)) : Math.min(...arr)
+}
