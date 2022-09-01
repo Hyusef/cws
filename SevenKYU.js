@@ -66,3 +66,7 @@ function longest(s1, s2) {
 function min(arr, toReturn) {
   return toReturn ==='index'? arr.indexOf(Math.min(...arr)) : Math.min(...arr)
 }
+
+/* ------------------------------------------------------ */
+function switcheroo(x){
+  return x.split('').map((e) => e == "a" ? "b" : e == "b" ? "a" : "c").join('')}
