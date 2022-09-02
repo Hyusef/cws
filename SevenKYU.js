@@ -70,3 +70,8 @@ function min(arr, toReturn) {
 /* ------------------------------------------------------ */
 function switcheroo(x){
   return x.split('').map((e) => e == "a" ? "b" : e == "b" ? "a" : "c").join('')}
+
+/* ------------------------------------------------------ */
+  function gordon(a){
+    return a.split(' ').join('!!!! ').replace(/[aA]/g,'@').replace(/[aeiou]/g,'*').toUpperCase()+'!!!!'
+  }
