@@ -75,3 +75,16 @@ function switcheroo(x){
   function gordon(a){
     return a.split(' ').join('!!!! ').replace(/[aA]/g,'@').replace(/[aeiou]/g,'*').toUpperCase()+'!!!!'
   }
+
+  /* ------------------------------------------------------ */
+
+  function generateShape(integer){
+    let str = ''
+      for(let x = 0; x<integer;x++){
+        for(let y =0; y<integer;y++){
+          str+='+';
+        }
+        str+='\n'
+      }
+    return str.trim();
+  }
