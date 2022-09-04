@@ -88,3 +88,7 @@ function switcheroo(x){
       }
     return str.trim();
   }
+/* ------------------------------------------------------ */
+  function toAcronym(inp){
+    return inp.split(' ').map(e=>e[0]).join('').toUpperCase()
+    }
