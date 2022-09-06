@@ -112,3 +112,10 @@ function toAcronym(inp) {
 function stantonMeasure(arr) {
   return arr.filter((x) => x === arr.filter((x) => x == 1).length).length;
 }
+
+/* ------------------------------------------------------ */
+
+function XO(str) {
+  const s = str.toLowerCase().split('');
+  return s.filter(x=>x=='x').length === s.filter(x=>x=='o').length
+  }
