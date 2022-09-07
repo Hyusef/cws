@@ -146,6 +146,9 @@ function tidyNumber(n){
 function fireFight(s){
   return s.replace(/Fire/g,'~~')
   }
-
+/* ------------------------------------------------------ */
+function hasUniqueChars(str){
+  return str == [...new Set(str.split(''))].join('')
+}
 
 
