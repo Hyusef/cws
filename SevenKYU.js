@@ -141,6 +141,11 @@ function getSumOfDigits(integer) {
 function tidyNumber(n){
   return !n.toString().split('').some((e,i,a)=> e < a[i-1] )
 }
+/* ------------------------------------------------------ */
+
+function fireFight(s){
+  return s.replace(/Fire/g,'~~')
+  }
 
 
 
