@@ -119,3 +119,11 @@ function XO(str) {
   const s = str.toLowerCase().split('');
   return s.filter(x=>x=='x').length === s.filter(x=>x=='o').length
   }
+
+
+  const binaryArrayToNumber = arr => {
+    return parseInt(arr.join('') , 2) 
+    };
+
+/* ------------------------------------------------------ */
+
