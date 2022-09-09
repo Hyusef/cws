@@ -151,4 +151,10 @@ function hasUniqueChars(str){
   return str == [...new Set(str.split(''))].join('')
 }
 
+/* ------------------------------------------------------ */
+function getCount(str) {
+  let s = str.match(/[AEIOUaeiou]/g);
+  return s ? s.length : 0;  
+}
+
 
