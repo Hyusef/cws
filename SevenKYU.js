@@ -116,45 +116,52 @@ function stantonMeasure(arr) {
 /* ------------------------------------------------------ */
 
 function XO(str) {
-  const s = str.toLowerCase().split('');
-  return s.filter(x=>x=='x').length === s.filter(x=>x=='o').length
-  }
+  const s = str.toLowerCase().split("");
+  return s.filter((x) => x == "x").length === s.filter((x) => x == "o").length;
+}
 
-
-  const binaryArrayToNumber = arr => {
-    return parseInt(arr.join('') , 2) 
-    };
+const binaryArrayToNumber = (arr) => {
+  return parseInt(arr.join(""), 2);
+};
 
 /* ------------------------------------------------------ */
 
 function getSumOfDigits(integer) {
   var sum = 0;
-  var digits =  Math.floor(integer).toString();
+  var digits = Math.floor(integer).toString();
 
-  for(var ix = 0; ix < digits.length; ix++) {
+  for (var ix = 0; ix < digits.length; ix++) {
     sum += +digits[ix];
   }
   return sum;
-} 
-/* ------------------------------------------------------ */
-
-function tidyNumber(n){
-  return !n.toString().split('').some((e,i,a)=> e < a[i-1] )
 }
 /* ------------------------------------------------------ */
 
-function fireFight(s){
-  return s.replace(/Fire/g,'~~')
-  }
+function tidyNumber(n) {
+  return !n
+    .toString()
+    .split("")
+    .some((e, i, a) => e < a[i - 1]);
+}
 /* ------------------------------------------------------ */
-function hasUniqueChars(str){
-  return str == [...new Set(str.split(''))].join('')
+
+function fireFight(s) {
+  return s.replace(/Fire/g, "~~");
+}
+/* ------------------------------------------------------ */
+function hasUniqueChars(str) {
+  return str == [...new Set(str.split(""))].join("");
 }
 
 /* ------------------------------------------------------ */
 function getCount(str) {
   let s = str.match(/[AEIOUaeiou]/g);
-  return s ? s.length : 0;  
+  return s ? s.length : 0;
 }
-
-
+/* ------------------------------------------------------ */
+function consecutive(arr, a, b) {
+  return (
+    arr.indexOf(a) === arr.indexOf(b) - 1 ||
+    arr.indexOf(a) === arr.indexOf(b) + 1
+  );
+}
