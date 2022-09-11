@@ -165,3 +165,15 @@ function consecutive(arr, a, b) {
     arr.indexOf(a) === arr.indexOf(b) + 1
   );
 }
+/* ------------------------------------------------------ */
+
+function triangular( n ) {
+  let s = 0;
+  let b = n;
+  while(b>0){
+    s+=b;
+    b--;
+  }
+  return n <= 0 ? 0 : s;
+}
+
