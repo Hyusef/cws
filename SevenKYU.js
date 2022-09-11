@@ -167,13 +167,18 @@ function consecutive(arr, a, b) {
 }
 /* ------------------------------------------------------ */
 
-function triangular( n ) {
+function triangular(n) {
   let s = 0;
   let b = n;
-  while(b>0){
-    s+=b;
+  while (b > 0) {
+    s += b;
     b--;
   }
   return n <= 0 ? 0 : s;
 }
 
+/* ------------------------------------------------------ */
+
+function nbDig(n, d) {
+  return Array.from({length:n+1},(_,i)=>(i*i)).join('').match(new RegExp(d, "g")).length
+  }
