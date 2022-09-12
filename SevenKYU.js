@@ -182,3 +182,9 @@ function triangular(n) {
 function nbDig(n, d) {
   return Array.from({length:n+1},(_,i)=>(i*i)).join('').match(new RegExp(d, "g")).length
   }
+
+/* ------------------------------------------------------ */
+
+  function digits(n) {
+    return n.toString().length;
+  }
