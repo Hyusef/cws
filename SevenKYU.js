@@ -188,3 +188,8 @@ function nbDig(n, d) {
   function digits(n) {
     return n.toString().length;
   }
+
+  /* ------------------------------------------------------ */
+  function evenNumbers(arr, n) {
+    return arr.filter(e=>e%2===0).slice(-n)
+  }
