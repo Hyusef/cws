@@ -193,3 +193,8 @@ function nbDig(n, d) {
   function evenNumbers(arr, n) {
     return arr.filter(e=>e%2===0).slice(-n)
   }
+/* ------------------------------------------------------ */
+  function divisibleByThree(str){
+  //No modulus allowed
+  return Number.isInteger(str.split('').reduce((a,b)=>+a + +b) / 3)
+} 
