@@ -403,3 +403,7 @@ function nbDig(n, d) {
 function lastDigit(n, d) {
   return d <= 0 ? [] : n.toString().slice(-d).split('').map(e=>+e)
   }
+/* ------------------------------------------------------ */
+  function overTheRoad(address, n){
+    return address % 2===0 ? (2*n)-(address-1) : 2*n - (address-1)
+  } 
