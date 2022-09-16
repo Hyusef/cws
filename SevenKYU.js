@@ -407,3 +407,9 @@ function lastDigit(n, d) {
   function overTheRoad(address, n){
     return address % 2===0 ? (2*n)-(address-1) : 2*n - (address-1)
   } 
+/* ------------------------------------------------------ */
+
+  function modifyMultiply (str,loc,num) {
+    const f = str.split(' ')[loc]+'-'
+    return f.repeat(num).slice(0,-1)
+    } 
