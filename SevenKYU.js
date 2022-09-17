@@ -413,3 +413,16 @@ function lastDigit(n, d) {
     const f = str.split(' ')[loc]+'-'
     return f.repeat(num).slice(0,-1)
     } 
+
+    /* ------------------------------------------------------ */
+
+
+  function stantonMeasure(arr){
+  let total = 0;
+  for(i=0;i<arr.length;i++){
+    if(arr[i]==1){
+      total++;
+    }
+  }
+  return arr.filter(e=>e==total).length
+}
