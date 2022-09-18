@@ -426,3 +426,12 @@ function lastDigit(n, d) {
   }
   return arr.filter(e=>e==total).length
 }
+/* ------------------------------------------------------ */
+function likes(names) {
+  let l = names.length;
+  return l==0?'no one likes this':
+  l==1?`${names[0]} likes this`:
+  l==2?`${names[0]} and ${names[1]} like this`:
+  l==3?`${names[0]}, ${names[1]} and ${names[2]} like this`:
+  `${names[0]}, ${names[1]} and ${l-2} others like this`
+}
