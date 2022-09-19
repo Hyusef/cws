@@ -435,3 +435,11 @@ function likes(names) {
   l==3?`${names[0]}, ${names[1]} and ${names[2]} like this`:
   `${names[0]}, ${names[1]} and ${l-2} others like this`
 }
+/* ------------------------------------------------------ */
+
+function dotCalculator (equation) {
+  let eq = equation.split(' ');
+  let o = eq[1]=='//'?'/':eq[1]
+  let tot = eval( eq[0].length + o + eq[2].length)
+  return(Array.from({length:tot},()=>'.').join(''))
+  }
