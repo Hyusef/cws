@@ -443,3 +443,10 @@ function dotCalculator (equation) {
   let tot = eval( eq[0].length + o + eq[2].length)
   return(Array.from({length:tot},()=>'.').join(''))
   }
+
+  /* ------------------------------------------------------ */
+  function sum() {
+    let t = 0;
+    for(var i in arguments){ t += +arguments[i]}
+    return t
+  }
