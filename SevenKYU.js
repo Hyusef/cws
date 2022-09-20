@@ -180,24 +180,26 @@ function triangular(n) {
 /* ------------------------------------------------------ */
 
 function nbDig(n, d) {
-  return Array.from({length:n+1},(_,i)=>(i*i)).join('').match(new RegExp(d, "g")).length
-  }
+  return Array.from({ length: n + 1 }, (_, i) => i * i)
+    .join("")
+    .match(new RegExp(d, "g")).length;
+}
 
 /* ------------------------------------------------------ */
 
-  function digits(n) {
-    return n.toString().length;
-  }
+function digits(n) {
+  return n.toString().length;
+}
 
-  /* ------------------------------------------------------ */
-  function evenNumbers(arr, n) {
-    return arr.filter(e=>e%2===0).slice(-n)
-  }
 /* ------------------------------------------------------ */
-  function divisibleByThree(str){
+function evenNumbers(arr, n) {
+  return arr.filter((e) => e % 2 === 0).slice(-n);
+}
+/* ------------------------------------------------------ */
+function divisibleByThree(str) {
   //No modulus allowed
-  return Number.isInteger(str.split('').reduce((a,b)=>+a + +b) / 3)
-} 
+  return Number.isInteger(str.split("").reduce((a, b) => +a + +b) / 3);
+}
 
 function collatz(n) {
   let arr = [];
@@ -381,72 +383,96 @@ function triangular(n) {
 /* ------------------------------------------------------ */
 
 function nbDig(n, d) {
-  return Array.from({length:n+1},(_,i)=>(i*i)).join('').match(new RegExp(d, "g")).length
-  }
+  return Array.from({ length: n + 1 }, (_, i) => i * i)
+    .join("")
+    .match(new RegExp(d, "g")).length;
+}
 
 /* ------------------------------------------------------ */
 
-  function digits(n) {
-    return n.toString().length;
-  }
+function digits(n) {
+  return n.toString().length;
+}
 
-  /* ------------------------------------------------------ */
-  function evenNumbers(arr, n) {
-    return arr.filter(e=>e%2===0).slice(-n)
-  }
 /* ------------------------------------------------------ */
-  function divisibleByThree(str){
+function evenNumbers(arr, n) {
+  return arr.filter((e) => e % 2 === 0).slice(-n);
+}
+/* ------------------------------------------------------ */
+function divisibleByThree(str) {
   //No modulus allowed
-  return Number.isInteger(str.split('').reduce((a,b)=>+a + +b) / 3)
-} 
+  return Number.isInteger(str.split("").reduce((a, b) => +a + +b) / 3);
+}
 /* ------------------------------------------------------ */
 function lastDigit(n, d) {
-  return d <= 0 ? [] : n.toString().slice(-d).split('').map(e=>+e)
-  }
+  return d <= 0
+    ? []
+    : n
+        .toString()
+        .slice(-d)
+        .split("")
+        .map((e) => +e);
+}
 /* ------------------------------------------------------ */
-  function overTheRoad(address, n){
-    return address % 2===0 ? (2*n)-(address-1) : 2*n - (address-1)
-  } 
+function overTheRoad(address, n) {
+  return address % 2 === 0 ? 2 * n - (address - 1) : 2 * n - (address - 1);
+}
 /* ------------------------------------------------------ */
 
-  function modifyMultiply (str,loc,num) {
-    const f = str.split(' ')[loc]+'-'
-    return f.repeat(num).slice(0,-1)
-    } 
+function modifyMultiply(str, loc, num) {
+  const f = str.split(" ")[loc] + "-";
+  return f.repeat(num).slice(0, -1);
+}
 
-    /* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
 
-
-  function stantonMeasure(arr){
+function stantonMeasure(arr) {
   let total = 0;
-  for(i=0;i<arr.length;i++){
-    if(arr[i]==1){
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] == 1) {
       total++;
     }
   }
-  return arr.filter(e=>e==total).length
+  return arr.filter((e) => e == total).length;
 }
 /* ------------------------------------------------------ */
 function likes(names) {
   let l = names.length;
-  return l==0?'no one likes this':
-  l==1?`${names[0]} likes this`:
-  l==2?`${names[0]} and ${names[1]} like this`:
-  l==3?`${names[0]}, ${names[1]} and ${names[2]} like this`:
-  `${names[0]}, ${names[1]} and ${l-2} others like this`
+  return l == 0
+    ? "no one likes this"
+    : l == 1
+    ? `${names[0]} likes this`
+    : l == 2
+    ? `${names[0]} and ${names[1]} like this`
+    : l == 3
+    ? `${names[0]}, ${names[1]} and ${names[2]} like this`
+    : `${names[0]}, ${names[1]} and ${l - 2} others like this`;
 }
 /* ------------------------------------------------------ */
 
-function dotCalculator (equation) {
-  let eq = equation.split(' ');
-  let o = eq[1]=='//'?'/':eq[1]
-  let tot = eval( eq[0].length + o + eq[2].length)
-  return(Array.from({length:tot},()=>'.').join(''))
-  }
+function dotCalculator(equation) {
+  let eq = equation.split(" ");
+  let o = eq[1] == "//" ? "/" : eq[1];
+  let tot = eval(eq[0].length + o + eq[2].length);
+  return Array.from({ length: tot }, () => ".").join("");
+}
 
-  /* ------------------------------------------------------ */
-  function sum() {
-    let t = 0;
-    for(var i in arguments){ t += +arguments[i]}
-    return t
+/* ------------------------------------------------------ */
+function sum() {
+  let t = 0;
+  for (var i in arguments) {
+    t += +arguments[i];
   }
+  return t;
+}
+/* ------------------------------------------------------ */
+
+function onePunch(i) {
+  return typeof i === "string" && i !== ""
+    ? i
+        .split(" ")
+        .sort()
+        .join(" ")
+        .replace(/[eaAE]/g, "")
+    : "Broken!";
+}
