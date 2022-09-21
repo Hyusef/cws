@@ -476,3 +476,7 @@ function onePunch(i) {
         .replace(/[eaAE]/g, "")
     : "Broken!";
 }
+/* ------------------------------------------------------ */
+function inviteMoreWomen(l) {
+  return l.filter(e=>e==-1).length < l.filter(e=>e==1).length 
+}
