@@ -480,3 +480,7 @@ function onePunch(i) {
 function inviteMoreWomen(l) {
   return l.filter(e=>e==-1).length < l.filter(e=>e==1).length 
 }
+/* ------------------------------------------------------ */
+function removeUrlAnchor(url){
+  return url.split('#')[0]
+}
