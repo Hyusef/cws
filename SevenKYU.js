@@ -484,3 +484,7 @@ function inviteMoreWomen(l) {
 function removeUrlAnchor(url){
   return url.split('#')[0]
 }
+/* ------------------------------------------------------ */
+function removeSmallest(numbers) {
+  return numbers.filter((_,i,a)=>i !== numbers.indexOf( Math.min(...numbers)) ) 
+}
