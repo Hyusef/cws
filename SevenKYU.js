@@ -488,3 +488,7 @@ function removeUrlAnchor(url){
 function removeSmallest(numbers) {
   return numbers.filter((_,i,a)=>i !== numbers.indexOf( Math.min(...numbers)) ) 
 }
+/* ------------------------------------------------------ */
+function highAndLow(numbers){
+return `${Math.max(...numbers.split(' ').map(e=>+e))} ${Math.min(...numbers.split(' ').map(e=>+e))}`
+}
