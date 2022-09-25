@@ -492,3 +492,11 @@ function removeSmallest(numbers) {
 function highAndLow(numbers){
 return `${Math.max(...numbers.split(' ').map(e=>+e))} ${Math.min(...numbers.split(' ').map(e=>+e))}`
 }
+/* ------------------------------------------------------ */
+function hammingDistance (a, b) {
+  let t = 0;
+  for(let i = 0 ; i < a.length; i++){
+   if(a[i] !== b[i]) t++;
+  }
+	return t;
+}
