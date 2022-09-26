@@ -478,30 +478,62 @@ function onePunch(i) {
 }
 /* ------------------------------------------------------ */
 function inviteMoreWomen(l) {
-  return l.filter(e=>e==-1).length < l.filter(e=>e==1).length 
+  return l.filter((e) => e == -1).length < l.filter((e) => e == 1).length;
 }
 /* ------------------------------------------------------ */
-function removeUrlAnchor(url){
-  return url.split('#')[0]
+function removeUrlAnchor(url) {
+  return url.split("#")[0];
 }
 /* ------------------------------------------------------ */
 function removeSmallest(numbers) {
-  return numbers.filter((_,i,a)=>i !== numbers.indexOf( Math.min(...numbers)) ) 
+  return numbers.filter(
+    (_, i, a) => i !== numbers.indexOf(Math.min(...numbers))
+  );
 }
 /* ------------------------------------------------------ */
-function highAndLow(numbers){
-return `${Math.max(...numbers.split(' ').map(e=>+e))} ${Math.min(...numbers.split(' ').map(e=>+e))}`
+function highAndLow(numbers) {
+  return `${Math.max(...numbers.split(" ").map((e) => +e))} ${Math.min(
+    ...numbers.split(" ").map((e) => +e)
+  )}`;
 }
 /* ------------------------------------------------------ */
-function hammingDistance (a, b) {
+function hammingDistance(a, b) {
   let t = 0;
-  for(let i = 0 ; i < a.length; i++){
-   if(a[i] !== b[i]) t++;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) t++;
   }
-	return t;
+  return t;
 }
 /* ------------------------------------------------------ */
-var number = function(busStops){
- return busStops.map(e=>e[0] - e[1]).reduce((a,b)=>a+b)
-}
+var number = function (busStops) {
+  return busStops.map((e) => e[0] - e[1]).reduce((a, b) => a + b);
+};
+/* ------------------------------------------------------ */
 
+function giveChange(amount) {
+  let arr = [0, 0, 0, 0, 0, 0];
+  while (amount >= 0) {
+    console.log(amount);
+    if (amount >= 100) {
+      amount -= 100;
+      arr[5]++;
+    } else if (amount >= 50 && amount < 100) {
+      amount -= 50;
+      arr[4]++;
+    } else if (amount >= 20 && amount < 50) {
+      amount -= 20;
+      arr[3]++;
+    } else if (amount >= 10 && amount < 20) {
+      amount -= 10;
+      arr[2]++;
+    } else if (amount >= 5 && amount < 10) {
+      amount -= 5;
+      arr[1]++;
+    } else if (amount >= 1 && amount < 5) {
+      amount -= 1;
+      arr[0]++;
+    } else {
+      return arr;
+    }
+  }
+}
