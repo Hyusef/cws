@@ -570,3 +570,7 @@ function dontGiveMeFive(start, end) {
     (e) => !e.toString().includes(5)
   ).length;
 }
+/* ------------------------------------------------------ */
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
