@@ -563,3 +563,10 @@ Really?
 function reverseList(arr) {
   return arr.reverse();
 }
+/* ------------------------------------------------------ */
+
+function dontGiveMeFive(start, end) {
+  return Array.from({ length: end - start + 1 }, (e) => (e = start++)).filter(
+    (e) => !e.toString().includes(5)
+  ).length;
+}
