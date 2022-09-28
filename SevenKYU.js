@@ -557,3 +557,9 @@ function sc(apple) {
     }
   }
 }
+/* ------------------------------------------------------ 
+Really?
+*/
+function reverseList(arr) {
+  return arr.reverse();
+}
