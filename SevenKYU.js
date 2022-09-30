@@ -573,12 +573,18 @@ function dontGiveMeFive(start, end) {
 /* ------------------------------------------------------ */
 
 function disemvowel(str) {
-  return str.replace(/[aeiou]/gi, '');
+  return str.replace(/[aeiou]/gi, "");
 }
 /* ------------------------------------------------------ */
 
 function findMultiples(int, limit) {
   let arr = [];
-  for(let i = 1; i <= limit; i++) if(i%int==0) arr.push(i)
+  for (let i = 1; i <= limit; i++) if (i % int == 0) arr.push(i);
   return arr;
+}
+
+/*------------------------------------------------------*/
+
+function minValue(values) {
+  return +[...new Set([...values])].sort().join("");
 }
