@@ -588,3 +588,12 @@ function findMultiples(int, limit) {
 function minValue(values) {
   return +[...new Set([...values])].sort().join("");
 }
+/*------------------------------------------------------*/
+
+function isSameLanguage(list) {
+  let t = []
+  for (b of list){
+   t.push(b.language)
+  }
+  return t.every((e,i,a)=>e==a[0])
+}
