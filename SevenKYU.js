@@ -597,3 +597,9 @@ function isSameLanguage(list) {
   }
   return t.every((e,i,a)=>e==a[0])
 }
+/*------------------------------------------------------*/
+function maxMultiple(divisor, bound){
+  let a = []
+  for(let i = 0; i <= bound; i+=divisor) a.push(i)
+  return a[a.length-1]
+}
