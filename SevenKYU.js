@@ -591,15 +591,26 @@ function minValue(values) {
 /*------------------------------------------------------*/
 
 function isSameLanguage(list) {
-  let t = []
-  for (b of list){
-   t.push(b.language)
+  let t = [];
+  for (b of list) {
+    t.push(b.language);
   }
-  return t.every((e,i,a)=>e==a[0])
+  return t.every((e, i, a) => e == a[0]);
 }
 /*------------------------------------------------------*/
-function maxMultiple(divisor, bound){
-  let a = []
-  for(let i = 0; i <= bound; i+=divisor) a.push(i)
-  return a[a.length-1]
+
+function maxMultiple(divisor, bound) {
+  let a = [];
+  for (let i = 0; i <= bound; i += divisor) a.push(i);
+  return a[a.length - 1];
+}
+/*------------------------------------------------------*/
+
+function sortByArea(a) {
+  let v = [];
+  for (let i = 0; i < a.length; i++) {
+    if (typeof a[i] === "number") v.push([a[i] * a[i] * Math.PI, i]);
+    else v.push([a[i][0] * a[i][1], i]);
+  }
+  return v.sort((a, b) => a[0] - b[0]).map((e) => a[e[1]]);
 }
