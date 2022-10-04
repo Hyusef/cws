@@ -614,3 +614,8 @@ function sortByArea(a) {
   }
   return v.sort((a, b) => a[0] - b[0]).map((e) => a[e[1]]);
 }
+/*------------------------------------------------------*/
+
+function filter_list(l) {
+  return l.filter((e) => typeof e === "number");
+}
