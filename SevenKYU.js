@@ -619,10 +619,20 @@ function filter_list(l) {
   return l.filter((e) => typeof e === "number");
 }
 /*------------------------------------------------------*/
-function sortByLength (array) {
-  return array.sort((a,b)=>a.length - b.length)
-};
+function sortByLength(array) {
+  return array.sort((a, b) => a.length - b.length);
+}
 /*------------------------------------------------------*/
-function noOdds( values ){
-  return values.filter(e=> e%2 == 0)
+function noOdds(values) {
+  return values.filter((e) => e % 2 == 0);
+}
+
+function equalize(array) {
+  return array.map((e) =>
+    e - array[0] === 0
+      ? "+0"
+      : e - array[0] > 0
+      ? `+${e - array[0]}`
+      : `${e - array[0]}`
+  );
 }
