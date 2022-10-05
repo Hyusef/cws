@@ -622,3 +622,7 @@ function filter_list(l) {
 function sortByLength (array) {
   return array.sort((a,b)=>a.length - b.length)
 };
+/*------------------------------------------------------*/
+function noOdds( values ){
+  return values.filter(e=> e%2 == 0)
+}
