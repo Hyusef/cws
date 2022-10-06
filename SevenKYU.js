@@ -626,7 +626,7 @@ function sortByLength(array) {
 function noOdds(values) {
   return values.filter((e) => e % 2 == 0);
 }
-
+/*------------------------------------------------------*/
 function equalize(array) {
   return array.map((e) =>
     e - array[0] === 0
@@ -635,4 +635,9 @@ function equalize(array) {
       ? `+${e - array[0]}`
       : `${e - array[0]}`
   );
+}
+/*------------------------------------------------------*/
+function numberJoy(n) {
+  let b  = n.toString().split('').reduce((a,b)=>+a + +b)
+  return  b * b.toString().split('').reverse().join('') == n  
 }
