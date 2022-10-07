@@ -641,3 +641,7 @@ function numberJoy(n) {
   let b  = n.toString().split('').reduce((a,b)=>+a + +b)
   return  b * b.toString().split('').reverse().join('') == n  
 }
+/*------------------------------------------------------*/
+function spacify(str) {
+  return str.split('').join(' ')
+}
