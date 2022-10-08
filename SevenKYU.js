@@ -645,3 +645,9 @@ function numberJoy(n) {
 function spacify(str) {
   return str.split('').join(' ')
 }
+/*------------------------------------------------------*/
+function getNewNotes(salary,bills){
+  return (salary - bills?.reduce((a,b)=>a+b,0)) > 0 
+    ? Math.floor((salary - bills.reduce((a,b) => a+b,0)) / 5) 
+    : 0
+}
