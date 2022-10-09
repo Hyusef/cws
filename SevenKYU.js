@@ -655,3 +655,10 @@ function getNewNotes(salary,bills){
 function tea42(input) {
 return input.toString().replace(/2/gi,'t')
 };
+/*------------------------------------------------------*/
+function partlist(arr) {
+  let b = []
+  for(let i = 0; i <arr.length-1; i++) 
+  b.push([arr.slice(0,i+1).join(' '),arr.slice(i+1).join(' ')])
+  return b
+}
