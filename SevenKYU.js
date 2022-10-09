@@ -651,3 +651,7 @@ function getNewNotes(salary,bills){
     ? Math.floor((salary - bills.reduce((a,b) => a+b,0)) / 5) 
     : 0
 }
+/*------------------------------------------------------*/
+function tea42(input) {
+return input.toString().replace(/2/gi,'t')
+};
