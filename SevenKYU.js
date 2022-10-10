@@ -662,3 +662,7 @@ function partlist(arr) {
   b.push([arr.slice(0,i+1).join(' '),arr.slice(i+1).join(' ')])
   return b
 }
+/*------------------------------------------------------*/
+function isLeapYear(duration, year) {
+  return duration * year % 1 === 0
+}
