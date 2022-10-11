@@ -671,5 +671,5 @@ function isLeapYear(duration, year) {
 }
 /*------------------------------------------------------*/
 function isFlush(cards) {
-return cards.map(e=>e[e.length-1]).every((e,_,a)=>e==a[0])
+  return cards.map((e) => e[e.length - 1]).every((e, _, a) => e == a[0]);
 }
