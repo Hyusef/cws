@@ -681,3 +681,7 @@ return prices.filter(e=>e<=budget).sort((a,b)=>a-b).toString()
 function missingNo(nums) {
   return nums.sort((a,b)=>a-b).filter((e,i,a)=>a[i]+1!=a[i+1])[0]+1
 }
+/*------------------------------------------------------*/
+function bump(x){
+  return x.split("").filter(e => e == "n").length <= 15 ? "Woohoo!" : "Car Dead";
+}
