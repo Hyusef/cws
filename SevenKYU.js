@@ -685,3 +685,9 @@ function missingNo(nums) {
 function bump(x){
   return x.split("").filter(e => e == "n").length <= 15 ? "Woohoo!" : "Car Dead";
 }
+/*------------------------------------------------------*/
+function hexHash(code){
+return code.split('').
+    map(e=>e.charCodeAt().
+    toString(16)).join('').replace(/[a-z]/gi,'').split('').reduce((a,b)=>+a + +b,0)
+}
