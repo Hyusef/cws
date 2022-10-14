@@ -691,3 +691,7 @@ return code.split('').
     map(e=>e.charCodeAt().
     toString(16)).join('').replace(/[a-z]/gi,'').split('').reduce((a,b)=>+a + +b,0)
 }
+/*------------------------------------------------------*/
+function reverse(string){
+  return string.split(' ').reverse().join(' ')
+  }
