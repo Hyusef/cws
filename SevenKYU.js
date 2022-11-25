@@ -41,7 +41,7 @@ function findShort(s) {
 
 /* ------------------------------------------------------- */
 
-const last = (xs) => (xs.length ? xs.pop() : null);
+const lasts = (xs) => (xs.length ? xs.pop() : null);
 
 /* ------------------------------------------------------- */
 
@@ -120,7 +120,7 @@ function XO(str) {
   return s.filter((x) => x == "x").length === s.filter((x) => x == "o").length;
 }
 
-const binaryArrayToNumber = (arr) => {
+const binaryArrayToNumbers = (arr) => {
   return parseInt(arr.join(""), 2);
 };
 
@@ -408,10 +408,10 @@ function lastDigit(n, d) {
   return d <= 0
     ? []
     : n
-        .toString()
-        .slice(-d)
-        .split("")
-        .map((e) => +e);
+      .toString()
+      .slice(-d)
+      .split("")
+      .map((e) => +e);
 }
 /* ------------------------------------------------------ */
 function overTheRoad(address, n) {
@@ -441,12 +441,12 @@ function likes(names) {
   return l == 0
     ? "no one likes this"
     : l == 1
-    ? `${names[0]} likes this`
-    : l == 2
-    ? `${names[0]} and ${names[1]} like this`
-    : l == 3
-    ? `${names[0]}, ${names[1]} and ${names[2]} like this`
-    : `${names[0]}, ${names[1]} and ${l - 2} others like this`;
+      ? `${names[0]} likes this`
+      : l == 2
+        ? `${names[0]} and ${names[1]} like this`
+        : l == 3
+          ? `${names[0]}, ${names[1]} and ${names[2]} like this`
+          : `${names[0]}, ${names[1]} and ${l - 2} others like this`;
 }
 /* ------------------------------------------------------ */
 
@@ -470,10 +470,10 @@ function sum() {
 function onePunch(i) {
   return typeof i === "string" && i !== ""
     ? i
-        .split(" ")
-        .sort()
-        .join(" ")
-        .replace(/[eaAE]/g, "")
+      .split(" ")
+      .sort()
+      .join(" ")
+      .replace(/[eaAE]/g, "")
     : "Broken!";
 }
 /* ------------------------------------------------------ */
@@ -632,8 +632,8 @@ function equalize(array) {
     e - array[0] === 0
       ? "+0"
       : e - array[0] > 0
-      ? `+${e - array[0]}`
-      : `${e - array[0]}`
+        ? `+${e - array[0]}`
+        : `${e - array[0]}`
   );
 }
 /*------------------------------------------------------*/
@@ -675,35 +675,41 @@ function isFlush(cards) {
 }
 /*------------------------------------------------------*/
 function search(budget, prices) {
-return prices.filter(e=>e<=budget).sort((a,b)=>a-b).toString()
+  return prices.filter(e => e <= budget).sort((a, b) => a - b).toString()
 }
 /*------------------------------------------------------*/
 function missingNo(nums) {
-  return nums.sort((a,b)=>a-b).filter((e,i,a)=>a[i]+1!=a[i+1])[0]+1
+  return nums.sort((a, b) => a - b).filter((e, i, a) => a[i] + 1 != a[i + 1])[0] + 1
 }
 /*------------------------------------------------------*/
-function bump(x){
+function bump(x) {
   return x.split("").filter(e => e == "n").length <= 15 ? "Woohoo!" : "Car Dead";
 }
 /*------------------------------------------------------*/
-function hexHash(code){
-return code.split('').
-    map(e=>e.charCodeAt().
-    toString(16)).join('').replace(/[a-z]/gi,'').split('').reduce((a,b)=>+a + +b,0)
+function hexHash(code) {
+  return code.split('').
+    map(e => e.charCodeAt().
+      toString(16)).join('').replace(/[a-z]/gi, '').split('').reduce((a, b) => +a + +b, 0)
 }
 /*------------------------------------------------------*/
-function reverse(string){
+function reverse(string) {
   return string.split(' ').reverse().join(' ')
-  }
+}
 /*------------------------------------------------------*/
-function stringMerge(string1, string2, letter){
-return string1.slice(0,string1.indexOf(letter))+ string2.slice(string2.indexOf(letter))
+function stringMerge(string1, string2, letter) {
+  return string1.slice(0, string1.indexOf(letter)) + string2.slice(string2.indexOf(letter))
 }
 /*------------------------------------------------------*/
 function squares(x, n) {
   let a = [x]
-  for(let i = 1; i < n;i++){
-    a[i] = Math.pow(a[i-1],2); 
+  for (let i = 1; i < n; i++) {
+    a[i] = Math.pow(a[i - 1], 2);
+    console.log(a);
   }
-  return n > 0? a : []
+  return n > 0 ? a : []
 }
+/*------------------------------------------------------*/
+var isSquare = function(n){
+  return  Number.isInteger(Math.sqrt(n))
+}
+
