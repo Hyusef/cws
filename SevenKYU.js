@@ -716,6 +716,17 @@ var isSquare = function(n){
 var isAnagram = function(test, original) {
   return test.toLowerCase().split('').sort().join('') == original.toLowerCase().split('').sort().join('')
   };
+  /*------------------------------------------------------*/
+  function eqSumPowdig(hMax, exp) {   
+    let a = [];
+    for(let i = 2; i <= hMax; i++){
+       let digit = i;
+       let sameDigit =  digit.toString().split('').map(e=> Math.pow(e,exp)).reduce((a,b)=> a + +b)
+       if(sameDigit == digit) a.push(digit);
+    }
+    return a;
+  }
+
   
 
 
