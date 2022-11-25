@@ -726,7 +726,14 @@ var isAnagram = function(test, original) {
     }
     return a;
   }
-
+  /*------------------------------------------------------*/
+  function nextPal(val) {
+    for (let i = val + 1; i < val + 100; i++) {
+        const digit = i;
+        if (digit.toString().split('').reverse().join('') == digit) return digit;
+    }
+    return val;
+}
   
 
 
