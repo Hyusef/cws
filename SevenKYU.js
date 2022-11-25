@@ -712,4 +712,11 @@ function squares(x, n) {
 var isSquare = function(n){
   return  Number.isInteger(Math.sqrt(n))
 }
+/*------------------------------------------------------*/
+var isAnagram = function(test, original) {
+  return test.toLowerCase().split('').sort().join('') == original.toLowerCase().split('').sort().join('')
+  };
+  
+
+
 
