@@ -762,6 +762,22 @@ function solution(start, finish) {
   [first,second ] = words.split(' '); 
   return second[0] + first.slice(1) + ' '+first[0] + second.slice(1)
   }
+  /*------------------------------------------------------*/
+  function isValidChess960(pieces) {
+    const firstBishop = pieces.indexOf('B')
+    const secondBishop = pieces.indexOf('B', firstBishop + 1);
+    const firstRook = pieces.indexOf('R')
+    const secondRook = pieces.indexOf('R', firstRook + 1);
+    const KingIndex = pieces.indexOf('K');
+    console.log(firstBishop, secondBishop);
+    if ((firstBishop % 2 == 0 && secondBishop % 2 == 1) || (firstBishop % 2 == 1 && secondBishop % 2 == 0)) {
+      if (firstRook < KingIndex && secondRook > KingIndex) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
   
  
 
