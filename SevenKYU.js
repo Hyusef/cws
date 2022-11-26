@@ -752,6 +752,12 @@ function isLeapYear(year) {
 function angle(n) {
   return (n - 2) * 180
 }
+/*------------------------------------------------------*/
+function solution(start, finish) {
+  const total = finish-start;
+   return total % 3 ==0? Math.round(finish-start)/3 : Math.round((finish-start)/3) +1
+ }
+ 
 
 
 
