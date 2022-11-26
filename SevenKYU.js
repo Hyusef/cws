@@ -748,6 +748,13 @@ function unscrambleEggs(word){
 function isLeapYear(year) {
   return (year % 4 == 0 && year % 100 !=0) || (year % 400 == 0 ) ;
 }
+/*------------------------------------------------------*/
+function angle(n) {
+  return (n - 2) * 180
+}
+
+
+
 
 
  
