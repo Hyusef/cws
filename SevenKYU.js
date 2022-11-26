@@ -757,6 +757,12 @@ function solution(start, finish) {
   const total = finish-start;
    return total % 3 ==0? Math.round(finish-start)/3 : Math.round((finish-start)/3) +1
  }
+ /*------------------------------------------------------*/
+ function spoonerize(words) {
+  [first,second ] = words.split(' '); 
+  return second[0] + first.slice(1) + ' '+first[0] + second.slice(1)
+  }
+  
  
 
 
