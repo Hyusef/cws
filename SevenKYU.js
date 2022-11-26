@@ -740,6 +740,12 @@ function derDieDas(wort){
   wort.split('').forEach(e=> e.match(/[aeiouäöü]/gi)?count++:0);
   return count < 2 ? 'das ' + wort : count ==2 || count == 3 ? 'die '+ wort : 'der ' + wort;
 }
+/*------------------------------------------------------*/
+
+function unscrambleEggs(word){
+  return word.split(/egg/).join('')
+}
+
  
   
 
