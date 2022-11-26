@@ -741,10 +741,14 @@ function derDieDas(wort){
   return count < 2 ? 'das ' + wort : count ==2 || count == 3 ? 'die '+ wort : 'der ' + wort;
 }
 /*------------------------------------------------------*/
-
 function unscrambleEggs(word){
   return word.split(/egg/).join('')
 }
+/*------------------------------------------------------*/
+function isLeapYear(year) {
+  return (year % 4 == 0 && year % 100 !=0) || (year % 400 == 0 ) ;
+}
+
 
  
   
