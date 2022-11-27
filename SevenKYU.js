@@ -781,6 +781,21 @@ function solution(start, finish) {
   function openOrSenior(data){
     return data.map(e=>e[0]>=55 &&e[1]>7?'Senior':'Open');
   }
+
+/*------------------------------------------------------*/
+function londonCityHacker(journey) {
+    return '£'+(journey.reduce((price,ride,i,a)=>{
+        if(typeof ride=='string')  price += 2.40
+        if(typeof ride=='number' && typeof a[i+1]=='number'){
+            journey.splice(i,1)
+            price += 1.50;
+        } else if (typeof ride =='number') {
+          price += 1.50
+        }
+      return price;
+      },0)).toFixed(2)
+    }
+    
   
   
  
