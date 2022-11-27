@@ -800,6 +800,12 @@ function londonCityHacker(journey) {
 function fizzbuzz(n) {
     return Array.from({ length: n }, (e, idx) => idx + 1).map(e => e % 5 == 0 && e % 3 == 0 ? 'FizzBuzz' : e % 3 == 0 ? 'Fizz' : e % 5 == 0 ? 'Buzz' : e);
 }
+/*------------------------------------------------------*/
+function vowelOne(s){
+    return s.replace(/[\s\S]/gi,(match)=>{
+      return 'aeiou'.includes(match.toLowerCase())?1:0
+    })
+  }
 
 
 
