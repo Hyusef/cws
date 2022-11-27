@@ -806,6 +806,10 @@ function vowelOne(s){
       return 'aeiou'.includes(match.toLowerCase())?1:0
     })
   }
+  /*------------------------------------------------------*/
+  function largest(n,xs){
+    return n > 0? xs.sort((a,b)=>a-b).slice(-n) : []
+    }
 
 
 
