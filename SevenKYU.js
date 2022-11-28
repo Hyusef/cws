@@ -814,6 +814,22 @@ function largest(n, xs) {
 function args_count() {
 return arguments.length
 }
+/*------------------------------------------------------*/
+function shorter_reverse_longer(a, b) {
+    let short = '';
+    let long = '';
+    a.length < b.length ? (short = a, long = b) : (short = b, long = a);
+    return short + long.split('').reverse('').join('') + short;
+  }
+/*------------------------------------------------------*/
+  var filterString = function(value) {
+    let numbers = '';
+    value.split('').filter(e=> (/\d/.test(e)?numbers+=e:0));
+    return +numbers;
+    }
+    
+  
+  
 
 
 
