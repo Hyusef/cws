@@ -17,5 +17,25 @@ function luckCheck(ticket) {
       let sum2 = [].reduce.call(ticket.slice(Math.ceil(ticket.length/2)), (num, char) => { return num + +char; }, 0)
       return /^\d+$/g.test(ticket) ? sum1 == sum2 : false ;
   }
+/*------------------------------------------------------*/
+  function orderWeight(str) {
+    let nums = str.split(' ');
+    let arr = [];
+    for (let i = 0; i < nums.length; i++) {
+        const number = nums[i];
+        let sum = [].reduce.call(number, (c, d) => { return c + +d }, 0)
+        arr.push([number, sum]);
+    }
+
+    return arr.sort((a, b) => {
+        if (a[1] == b[1]) {
+            return a[0][0] - b[0][0]
+        } else {
+            return a[1] - b[1]
+        }
+    }).map(e => e[0]).join(' ')
+}
+
+
   
 
