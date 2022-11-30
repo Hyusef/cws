@@ -9,8 +9,13 @@ var solution = function (f, s) {
     return a.reduce((a, b) => a + b) / f.length
 }
 /*------------------------------------------------------*/
-function alphanumeric(string){
-    let reg = /[a-zA-Z0-9]/g;
-    return string.match(reg)?.length == string.length;
+function luckCheck(ticket) {
+    if(!/^\d+$/g.test(ticket)){
+      throw 'undefined'
     }
-    
+      let sum1 = [].reduce.call(ticket.slice(0, ticket.length / 2), (num, char) => { return num + +char; }, 0)
+      let sum2 = [].reduce.call(ticket.slice(Math.ceil(ticket.length/2)), (num, char) => { return num + +char; }, 0)
+      return /^\d+$/g.test(ticket) ? sum1 == sum2 : false ;
+  }
+  
+
