@@ -827,6 +827,12 @@ function shorter_reverse_longer(a, b) {
     value.split('').filter(e=> (/\d/.test(e)?numbers+=e:0));
     return +numbers;
     }
+
+    
+
+
+    
+    
     
   
   
