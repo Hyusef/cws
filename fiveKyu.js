@@ -26,10 +26,9 @@ function luckCheck(ticket) {
         let sum = [].reduce.call(number, (c, d) => { return c + +d }, 0)
         arr.push([number, sum]);
     }
-
     return arr.sort((a, b) => {
         if (a[1] == b[1]) {
-            return a[0][0] - b[0][0]
+            return (a[0][0] - b[0][0] || a[0][1] - b[0][1]) || a[0] - b[0]
         } else {
             return a[1] - b[1]
         }
