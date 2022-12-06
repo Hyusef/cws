@@ -828,6 +828,11 @@ function shorter_reverse_longer(a, b) {
     return +numbers;
     }
 
+/*------------------------------------------------------*/
+var isSquare = function(arr){
+    return arr.length ?  arr.every(e=> Math.sqrt(e) % 1 == 0) : undefined;
+      }
+
     
 
 
