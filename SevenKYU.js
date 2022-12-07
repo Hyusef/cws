@@ -832,6 +832,11 @@ function shorter_reverse_longer(a, b) {
 var isSquare = function(arr){
     return arr.length ?  arr.every(e=> Math.sqrt(e) % 1 == 0) : undefined;
       }
+/*------------------------------------------------------*/
+      function swap (string) {
+    return string.split('').map(e=>'aeiou'.includes(e)?e.toUpperCase(): e).join('');
+  }
+
 
     
 
