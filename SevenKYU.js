@@ -855,6 +855,19 @@ function DNAStrand(dna){
     }
 return (dna.replace(/[ATCG]/g,(a,i)=>b[a]))
 }
+/*------------------------------------------------------*/
+const prevMultOfThree = n => {
+    if (n % 3 == 0) return n;
+    const arr = Array.from(String(n), Number);
+    while (arr.length != 0) {
+        if (Number(arr.join('')) % 3 == 0) {
+            return Number(arr.join(''));
+        } else {
+            arr.pop();
+        }
+    }
+    return null;
+}
 
 
 
