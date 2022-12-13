@@ -812,7 +812,7 @@ function largest(n, xs) {
 }
 /*------------------------------------------------------*/
 function args_count() {
-    return arguments.length
+return arguments.length
 }
 /*------------------------------------------------------*/
 function shorter_reverse_longer(a, b) {
@@ -820,43 +820,55 @@ function shorter_reverse_longer(a, b) {
     let long = '';
     a.length < b.length ? (short = a, long = b) : (short = b, long = a);
     return short + long.split('').reverse('').join('') + short;
-}
+  }
 /*------------------------------------------------------*/
-var filterString = function (value) {
+  var filterString = function(value) {
     let numbers = '';
-    value.split('').filter(e => (/\d/.test(e) ? numbers += e : 0));
+    value.split('').filter(e=> (/\d/.test(e)?numbers+=e:0));
     return +numbers;
-}
+    }
 
 /*------------------------------------------------------*/
-var isSquare = function (arr) {
-    return arr.length ? arr.every(e => Math.sqrt(e) % 1 == 0) : undefined;
-}
+var isSquare = function(arr){
+    return arr.length ?  arr.every(e=> Math.sqrt(e) % 1 == 0) : undefined;
+      }
 /*------------------------------------------------------*/
-function swap(string) {
-    return string.split('').map(e => 'aeiou'.includes(e) ? e.toUpperCase() : e).join('');
-}
+      function swap (string) {
+    return string.split('').map(e=>'aeiou'.includes(e)?e.toUpperCase(): e).join('');
+  }
 
-/*------------------------------------------------------*/
-function cupAndBalls(b, arr) {
+  /*------------------------------------------------------*/
+  function cupAndBalls(b, arr) {
     return arr.reduce((_, c) => {
         if (c.includes(b)) b = c.find(e => e != b) || b;
         return b;
     }, b)
 };
 
+/*------------------------------------------------------*/
+function DNAStrand(dna){
+    let b = {
+        'A' : 'T',
+        'C' : 'G',
+        'T' : 'A',
+        'G' : 'C'
+    }
+return (dna.replace(/[ATCG]/g,(a,i)=>b[a]))
+}
 
 
 
 
 
 
+    
 
 
-
-
-
-
+    
+    
+    
+  
+  
 
 
 
