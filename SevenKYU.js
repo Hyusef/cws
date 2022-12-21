@@ -868,6 +868,10 @@ const prevMultOfThree = n => {
     }
     return null;
 }
+/*------------------------------------------------------*/
+function isInStrictMode() {
+    return (typeof this == 'undefined');
+  }
 
 
 
