@@ -878,6 +878,12 @@ function betweenExtremes(numbers) {
     const a = numbers.sort((a, b) => a - b)
     return a[a.length - 1] - a[0];
 }
+/*------------------------------------------------------*/
+
+function getMiddle(s)
+{
+return s.length%2==1? s[Math.floor(s.length/2)] : s.slice((s.length/2)-1,(s.length/2)+1)
+}
 
 
 
