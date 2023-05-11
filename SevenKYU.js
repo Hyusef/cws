@@ -885,6 +885,12 @@ function getMiddle(s)
 return s.length%2==1? s[Math.floor(s.length/2)] : s.slice((s.length/2)-1,(s.length/2)+1)
 }
 
+/*------------------------------------------------------*/
+
+var greet = function(name) {
+  return 'Hello ' + name[0].toUpperCase()+name.slice(1).toLowerCase() + '!'
+};
+
 
 
 
