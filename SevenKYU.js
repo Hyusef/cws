@@ -880,16 +880,26 @@ function betweenExtremes(numbers) {
 }
 /*------------------------------------------------------*/
 
-function getMiddle(s)
-{
-return s.length%2==1? s[Math.floor(s.length/2)] : s.slice((s.length/2)-1,(s.length/2)+1)
+function getMiddle(s) {
+    return s.length % 2 == 1 ? s[Math.floor(s.length / 2)] : s.slice((s.length / 2) - 1, (s.length / 2) + 1)
 }
 
 /*------------------------------------------------------*/
 
-var greet = function(name) {
-  return 'Hello ' + name[0].toUpperCase()+name.slice(1).toLowerCase() + '!'
+var greet = function (name) {
+    return 'Hello ' + name[0].toUpperCase() + name.slice(1).toLowerCase() + '!'
 };
+/*------------------------------------------------------*/
+function secondSymbol(s, symbol) {
+    let count = 0;
+    let idx;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === symbol) count++;
+        idx = i;
+        if (count >= 2) break;
+    }
+    return (count == 0 || count) == 1 ? -1 : idx;
+}
 
 
 
