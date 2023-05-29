@@ -900,7 +900,13 @@ function secondSymbol(s, symbol) {
     }
     return (count == 0 || count) == 1 ? -1 : idx;
 }
-
+/*------------------------------------------------------*/
+function maxProduct(a) {
+    let e=0, b=0;
+    for(let i = 0; i < a.length; i++) if (a[i]>e) e =a[i];    
+    for(let i = 0; i < a.length; i++) if (a[i]>b && a[i] != e ) b =a[i];    
+    return  b * e
+  }
 
 
 
